@@ -65,6 +65,14 @@
   #define X_CS_PIN                          PA15
 #endif
 
+#define X2_STEP_PIN                          PD0
+#define X2_DIR_PIN                           PD2
+#define X2_ENABLE_PIN                        PD5
+#ifndef X2_CS_PIN
+  #define X2_CS_PIN                          PE4
+#endif
+
+
 #define Y_STEP_PIN                          PE11
 #define Y_DIR_PIN                           PE8
 #define Y_ENABLE_PIN                        PD7
@@ -93,11 +101,18 @@
   #define E1_CS_PIN                         PG15
 #endif
 
-#define E2_STEP_PIN                         PD13
-#define E2_DIR_PIN                          PG9
-#define E2_ENABLE_PIN                       PF0
-#ifndef E2_CS_PIN
-  #define E2_CS_PIN                         PG12
+//#define E2_STEP_PIN                         PD13
+//#define E2_DIR_PIN                          PG9
+//#define E2_ENABLE_PIN                       PF0
+//#ifndef E2_CS_PIN
+//  #define E2_CS_PIN                         PG12
+//#endif
+
+#define Z2_STEP_PIN                         PD13
+#define Z2_DIR_PIN                          PG9
+#define Z2_ENABLE_PIN                       PF0
+#ifndef Z2_CS_PIN
+  #define Z2_CS_PIN                         PG12
 #endif
 
 //
@@ -140,6 +155,9 @@
   #define X_SERIAL_TX_PIN                   PC13
   #define X_SERIAL_RX_PIN                   PC13
 
+  #define X2_SERIAL_TX_PIN                   PD9
+  #define X2_SERIAL_RX_PIN                   PD9
+
   #define Y_SERIAL_TX_PIN                   PE3
   #define Y_SERIAL_RX_PIN                   PE3
 
@@ -152,8 +170,11 @@
   #define E1_SERIAL_TX_PIN                  PD1
   #define E1_SERIAL_RX_PIN                  PD1
 
-  #define E2_SERIAL_TX_PIN                  PD6
-  #define E2_SERIAL_RX_PIN                  PD6
+  //#define E2_SERIAL_TX_PIN                  PD6
+  //#define E2_SERIAL_RX_PIN                  PD6
+
+  #define Z2_SERIAL_TX_PIN                  PD6
+  #define Z2_SERIAL_RX_PIN                  PD6
 
   // Reduce baud rate to improve software serial reliability
   #define TMC_BAUD_RATE 19200
