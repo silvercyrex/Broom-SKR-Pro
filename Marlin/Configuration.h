@@ -557,7 +557,7 @@
  *
  * *** IT IS HIGHLY RECOMMENDED TO LEAVE THIS OPTION ENABLED! ***
  */
-#define PREVENT_COLD_EXTRUSION
+//#define PREVENT_COLD_EXTRUSION
 #define EXTRUDE_MINTEMP 170
 
 /**
@@ -679,7 +679,7 @@
 //#define Z3_DRIVER_TYPE A4988
 //#define Z4_DRIVER_TYPE A4988
 #define E0_DRIVER_TYPE TMC2209
-//#define E1_DRIVER_TYPE TMC2209
+#define E1_DRIVER_TYPE TMC2209
 //#define E2_DRIVER_TYPE A4988
 //#define E3_DRIVER_TYPE A4988
 //#define E4_DRIVER_TYPE A4988
@@ -1093,11 +1093,11 @@
 // @section machine
 
 // The size of the print bed
-#define X_BED_SIZE 219
+#define X_BED_SIZE 155
 #define Y_BED_SIZE 219
 
 // Travel limits (mm) after homing, corresponding to endstop positions.
-#define X_MIN_POS -43
+#define X_MIN_POS -62
 #define Y_MIN_POS -7
 #define Z_MIN_POS -2
 #define X_MAX_POS X_BED_SIZE

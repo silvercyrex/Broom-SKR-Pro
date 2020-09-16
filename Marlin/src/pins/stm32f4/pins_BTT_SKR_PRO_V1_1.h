@@ -65,14 +65,6 @@
   #define X_CS_PIN                          PA15
 #endif
 
-#define X2_STEP_PIN                         PD15
-#define X2_DIR_PIN                          PE7
-#define X2_ENABLE_PIN                       PA3
-#ifndef X2_CS_PIN
-  #define X2_CS_PIN                         PG15
-#endif
-
-
 #define Y_STEP_PIN                          PE11
 #define Y_DIR_PIN                           PE8
 #define Y_ENABLE_PIN                        PD7
@@ -87,34 +79,44 @@
   #define Z_CS_PIN                          PB9
 #endif
 
-#define E0_STEP_PIN                         PE14
-#define E0_DIR_PIN                          PA0
-#define E0_ENABLE_PIN                       PC3
-#ifndef E0_CS_PIN
-  #define E0_CS_PIN                         PB3
+#define X2_STEP_PIN                         PE14
+#define X2_DIR_PIN                          PA0
+#define X2_ENABLE_PIN                       PC3
+#ifndef X2_CS_PIN
+  #define X2_CS_PIN                         PB3
 #endif
 
-#define E1_STEP_PIN                          PD0
-#define E1_DIR_PIN                           PD2
-#define E1_ENABLE_PIN                        PD5
-#ifndef E1_CS_PIN
-  #define E1_CS_PIN                          PE4
+#define Z2_STEP_PIN                          PD15
+#define Z2_DIR_PIN                           PE7
+#define Z2_ENABLE_PIN                        PA3
+#ifndef Z2_CS_PIN
+  #define Z2_CS_PIN                          PG15
 #endif
 
-
-//#define E2_STEP_PIN                         PD13
-//#define E2_DIR_PIN                          PG9
-//#define E2_ENABLE_PIN                       PF0
-//#ifndef E2_CS_PIN
-//  #define E2_CS_PIN                         PG12
+#define E0_STEP_PIN                         PC4
+#define E0_DIR_PIN                          PF9
+#define E0_ENABLE_PIN                       PC9
+//#ifndef E0_CS_PIN
+  //#define E0_CS_PIN                         PG12
 //#endif
 
-#define Z2_STEP_PIN                         PD13
-#define Z2_DIR_PIN                          PG9
-#define Z2_ENABLE_PIN                       PF0
-#ifndef Z2_CS_PIN
-  #define Z2_CS_PIN                         PG12
+#define E1_STEP_PIN                         PC5
+#define E1_DIR_PIN                          PF10
+#define E1_ENABLE_PIN                       PF8
+//#ifndef E1_CS_PIN
+  //#define E1_CS_PIN                         PG12
+//#endif
+
+
+
+#define E2_STEP_PIN                         PD13
+#define E2_DIR_PIN                          PG9
+#define E2_ENABLE_PIN                       PF0
+#ifndef E2_CS_PIN
+  #define E2_CS_PIN                         PG12
 #endif
+
+
 
 //
 // Software SPI pins for TMC2130 stepper drivers
@@ -156,8 +158,8 @@
   #define X_SERIAL_TX_PIN                   PC13
   #define X_SERIAL_RX_PIN                   PC13
 
-  #define X2_SERIAL_TX_PIN                  PD1
-  #define X2_SERIAL_RX_PIN                  PD1
+  #define X2_SERIAL_TX_PIN                  PD4
+  #define X2_SERIAL_RX_PIN                  PD4
 
   
   #define Y_SERIAL_TX_PIN                   PE3
@@ -166,18 +168,18 @@
   #define Z_SERIAL_TX_PIN                   PE1
   #define Z_SERIAL_RX_PIN                   PE1
 
-  #define E0_SERIAL_TX_PIN                  PD4
-  #define E0_SERIAL_RX_PIN                  PD4
+  #define E0_SERIAL_TX_PIN                  PG11
+  #define E0_SERIAL_RX_PIN                  PG11
 
-  #define E1_SERIAL_TX_PIN                   PD9
-  #define E1_SERIAL_RX_PIN                   PD9
+  #define E1_SERIAL_TX_PIN                  PG13
+  #define E1_SERIAL_RX_PIN                  PG13
 
 
-  //#define E2_SERIAL_TX_PIN                  PD6
-  //#define E2_SERIAL_RX_PIN                  PD6
+  #define E2_SERIAL_TX_PIN                  PD6
+  #define E2_SERIAL_RX_PIN                  PD6
 
-  #define Z2_SERIAL_TX_PIN                  PD6
-  #define Z2_SERIAL_RX_PIN                  PD6
+  #define Z2_SERIAL_TX_PIN                  PD1
+  #define Z2_SERIAL_RX_PIN                  PD1
 
   // Reduce baud rate to improve software serial reliability
   #define TMC_BAUD_RATE 19200
