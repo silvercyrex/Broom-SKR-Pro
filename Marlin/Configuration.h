@@ -1123,12 +1123,12 @@
 // @section machine
 
 // The size of the print bed
-#define X_BED_SIZE 219
+#define X_BED_SIZE 220
 #define Y_BED_SIZE 219
 
 // Travel limits (mm) after homing, corresponding to endstop positions.
-#define X_MIN_POS -62
-#define Y_MIN_POS -6
+#define X_MIN_POS -65
+#define Y_MIN_POS -8
 #define Z_MIN_POS 0
 #define X_MAX_POS X_BED_SIZE
 #define Y_MAX_POS Y_BED_SIZE
@@ -1805,7 +1805,7 @@
 //
 // Add individual axis homing items (Home X, Home Y, and Home Z) to the LCD menu.
 //
-//#define INDIVIDUAL_AXIS_HOMING_MENU
+#define INDIVIDUAL_AXIS_HOMING_MENU
 
 //
 // SPEAKER/BUZZER
